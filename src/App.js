@@ -52,9 +52,13 @@ function App() {
         <Route path="/hosting" element={<Hosting />} />
         <Route path="/internet" element={<Internet />} />
       </Routes>
-      
+
+      {/* Content */}
+      <Home />
+
       {/* Footer */}
       <Footer />
+      
     </Router>
   );
 }
