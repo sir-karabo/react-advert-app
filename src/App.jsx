@@ -14,9 +14,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Contact from "./pages/res/Hosting";
-import Contact from "./pages/res/Internet";
-import Contact from "./pages/res/Partners";
+import Hosting from "./pages/res/Hosting";
+import Internet from "./pages/res/Internet";
+import Partners from "./pages/res/Partners";
 import Contact from "./pages/res/Specialized";
 //Component
 import Navbar from "./pages/components/Navbar";
@@ -34,9 +34,10 @@ function App() {
       <Navbar />
 
       {/* Popup Form */}
-      {isPopupVisible && (
+
+      {/* {isPopupVisible && (
         <ContactFormPopup onClose={() => setIsPopupVisible(false)} />
-      )}
+      )} */}
 
       <Routes>
         {/* Menu Routes */}
