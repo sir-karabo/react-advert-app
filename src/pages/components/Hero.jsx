@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 // import Slider from "react-slick";
 // import Integration from "./Integration"; // Adjust the path if necessary
 // import Footer from "./Footer";
@@ -12,188 +12,54 @@
 // import cloudImage from "./media/cloud2.jpg";
 // import webDevImage from "./media/web_dev.jpg";
 
-// const App = () => {
-//   const sliderSettings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//   };
+const App = () => {
+  return (
+    <section>
+      <div class="bg-black text-white py-20">
+        <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+          <div class="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
+            <h1 class="text-3xl md:text-5xl p-2 text-yellow-300 tracking-loose">
+              onUncapped
+            </h1>
+            <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">
+              The Timeless Digital Experience
+            </h2>
+            <p class="text-sm md:text-base text-gray-50 mb-4">
+              Explore your favourite business companion on your journey.
+            </p>
+            <a
+              href="#"
+              class="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
+            >
+              Explore Now
+            </a>
+          </div>
+          <div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
+            <div class="h-48 flex flex-wrap content-center">
+              <div>
+                <img
+                  class="inline-block mt-28 hidden xl:block"
+                  src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"
+                />
+              </div>
+              <div>
+                <img
+                  class="inline-block mt-24 md:mt-0 p-8 md:p-0"
+                  src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"
+                />
+              </div>
+              <div>
+                <img
+                  class="inline-block mt-28 hidden lg:block"
+                  src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-//   const slides = [
-//     {
-//       title: "Internet Packages",
-//       description: "Our Products",
-//       buttonText: "Learn More",
-//       imageUrl: wifiImage,
-//     },
-//     {
-//       title: "Cloud Packages",
-//       description: "Our Products",
-//       buttonText: "Learn More",
-//       imageUrl: cloudImage,
-//     },
-//     {
-//       title: "Web Services",
-//       description: "Our Products",
-//       buttonText: "Learn More",
-//       imageUrl: webDevImage,
-//     },
-//   ];
-
-//   // State for step-by-step form
-//   const [step, setStep] = useState(1);
-//   const [formData, setFormData] = useState({
-//     firstName: "",
-//     lastName: "",
-//     email: "",
-//     mobile: "",
-//     otp: "",
-//   });
-
-//   // Handle form input changes
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   // Navigation for form steps
-//   const nextStep = () => {
-//     setStep(step + 1);
-//   };
-
-//   const prevStep = () => {
-//     setStep(step - 1);
-//   };
-
-//   return (
-//     <div className="app-container">
-//       {/* Slider Section */}
-//       <section className="slider-section w-full">
-//         <Slider {...sliderSettings}>
-//           {slides.map((slide, index) => (
-//             <div
-//               key={index}
-//               className="slide relative w-full h-screen flex items-center justify-center"
-//             >
-//               <img
-//                 src={slide.imageUrl}
-//                 alt={slide.title}
-//                 className="w-full h-full object-cover"
-//               />
-//               <div className="overlay absolute inset-0 bg-black opacity-50"></div>
-//               <div className="content absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-//                 <p className="text-lg font-semibold text-blue-300 mb-2">
-//                   {slide.description}
-//                 </p>
-//                 <h2 className="text-5xl font-bold text-white mb-4">
-//                   {slide.title}
-//                 </h2>
-//                 <button className="bg-blue-500 text-white px-6 py-3 rounded-md mt-4">
-//                   {slide.buttonText}
-//                 </button>
-//               </div>
-//             </div>
-//           ))}
-//         </Slider>
-//       </section>
-
-//       {/* About Us Section */}
-//       <section className="about-us-section w-full py-16 bg-gray-100">
-//         <div className="container mx-auto px-6">
-//           <h1 className="aboutUsTitle text-4xl font-bold text-blue-800 mb-6">
-//             About Us
-//           </h1>
-//           <p className="aboutUsDescription text-gray-700 leading-7">
-//             OnUncapped Networks specializes in cloud storage, bandwidth security
-//             management, and ICT consulting services tailored for both commercial
-//             and residential customers.
-//           </p>
-//           <div className="whyChooseUs mt-8">
-//             <h3 className="whyChooseTitle text-2xl font-semibold text-blue-600 mb-4">
-//               Why Choose Us?
-//             </h3>
-//             <ul className="whyChooseList list-disc pl-6 text-gray-600">
-//               <li>Reliable Speeds for Streaming & Gaming</li>
-//               <li>Best Coverage in South Africa</li>
-//               <li>Reduced Latency</li>
-//               <li>Uncapped 4G Experience</li>
-//             </ul>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Integrations Section */}
-//       <Integration />
-
-//       {/* Testimonials Section */}
-//       <Testimonials />
-
-//       {/* Contact Form Section */}
-//       <section className="contact-form-section w-full py-16 bg-white">
-//         <div className="container mx-auto px-6">
-//           <form>
-//             <h2 className="text-center text-2xl font-bold mb-6">
-//               Enter Your Details
-//             </h2>
-//             {step === 1 && (
-//               <div>
-//                 <input
-//                   type="text"
-//                   name="firstName"
-//                   placeholder="First Name"
-//                   value={formData.firstName}
-//                   onChange={handleInputChange}
-//                   required
-//                   className="block w-full p-2 mb-4 border border-gray-300 rounded"
-//                 />
-//                 <button
-//                   type="button"
-//                   onClick={nextStep}
-//                   className="bg-blue-500 text-white px-4 py-2 rounded"
-//                 >
-//                   Next
-//                 </button>
-//               </div>
-//             )}
-//             {step === 2 && (
-//               <div>
-//                 <input
-//                   type="text"
-//                   name="lastName"
-//                   placeholder="Last Name"
-//                   value={formData.lastName}
-//                   onChange={handleInputChange}
-//                   required
-//                   className="block w-full p-2 mb-4 border border-gray-300 rounded"
-//                 />
-//                 <button
-//                   type="button"
-//                   onClick={prevStep}
-//                   className="bg-gray-500 text-white px-4 py-2 rounded mr-2"
-//                 >
-//                   Back
-//                 </button>
-//                 <button
-//                   type="button"
-//                   onClick={nextStep}
-//                   className="bg-blue-500 text-white px-4 py-2 rounded"
-//                 >
-//                   Next
-//                 </button>
-//               </div>
-//             )}
-//             {/* More steps go here */}
-//           </form>
-//         </div>
-//       </section>
-
-//       {/* Footer Section */}
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default App;
+export default Hero;
