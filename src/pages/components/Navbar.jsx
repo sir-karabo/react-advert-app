@@ -4,7 +4,7 @@ import { FaCaretDown } from "react-icons/fa";
 import "../../css/components/navbar.css";
 // Import the logo image
 import logo from "../../media/assets/logo.svg";
-
+// Navbar returns data
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
@@ -20,7 +20,6 @@ const Navbar = () => {
           <div class="flex-1 md:flex md:items-center md:gap-12">
             <a class="block text-purple-600" href="#">
               <span class="sr-only">Home</span>
-              {/* Logo goes here */}
               <img src={logo} alt="Logo" class="h-8 w-auto" />
             </a>
           </div>
@@ -46,7 +45,6 @@ const Navbar = () => {
                   </a>
                 </li>
 
-                {/* Services Dropdown */}
                 <li
                   className="dropdown"
                   onMouseEnter={() => handleServicesHover(true)}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-// import Slider from "react-slick";
+import Slider from "react-slick";
+import Footer from "../../css/components/hero.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 // import Integration from "./Integration"; // Adjust the path if necessary
-// import Footer from "./Footer";
 // import Testimonials from "./Testimonials";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import "./Hero.css";
 
 // // Import images
 // import wifiImage from "./media/wifi_homepage.png";
