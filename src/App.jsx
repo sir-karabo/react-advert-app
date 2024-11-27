@@ -6,7 +6,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-//Res (Resources)
+//base (baseources)
 import logo from "./logo.svg";
 import "./css/App.css";
 //Pages
@@ -14,10 +14,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Hosting from "./pages/res/Hosting";
-import Internet from "./pages/res/Internet";
-import Partners from "./pages/res/Partners";
-import Contact from "./pages/res/Specialized";
+import Specialized from "./pages/base/Specialized";
+import Hosting from "./pages/base/Hosting";
+import Internet from "./pages/base/Internet";
+import Partners from "./pages/util/Partners";
 //Component
 import Navbar from "./pages/components/Navbar";
 import Footer from "./pages/components/Footer";
