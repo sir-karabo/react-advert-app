@@ -5,128 +5,131 @@ import "../../css/components/navbar.css";
 import "../../js/components/navbar.js";
 // Import the logo image
 import logo from "../../media/assets/logo.svg";
-// Navbar returns data
+
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleServicesHover = (isOpen) => {
     setServicesOpen(isOpen);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     // Navigation
-    <header class="h-20 bg-white">
-      <nav class="relative px-2 py-4">
-        <div class="container mx-auto flex justify-between items-center">
-          <img
-            src="https://avrasys.hu/logoipsum-logo-54.svg"
-            alt="Tailwindcss Navigation"
-          />
+    <header className="h-20 bg-white">
+      <nav className="relative px-2 py-4">
+        <div className="container mx-auto flex justify-between items-center">
+          {/* Logo */}
+          <img src={logo} alt="Website Logo" className="h-8" />
 
-          <ul class="hidden md:flex space-x-6">
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-6">
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
-            <li class="flex relative group">
-              <a href="#" class="mr-1">
-                Services
-              </a>
-              <i class="fa-solid fa-chevron-down fa-2xs pt-3"></i>
-              <ul class="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
-                <li class="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Consultation</a>
-                </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Internet</a>
-                </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Hosting</a>
-                </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Partners</a>
-                </li>
-              </ul>
+            <li
+              className="relative"
+              onMouseEnter={() => handleServicesHover(true)}
+              onMouseLeave={() => handleServicesHover(false)}
+            >
+              <span className="mr-1">Services</span>
+              <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
+              {servicesOpen && (
+                <ul className="absolute bg-white p-3 w-52 top-6 transform scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                  <li className="text-sm hover:bg-slate-100 leading-8">
+                    <Link to="/consultation">Consultation</Link>
+                  </li>
+                  <li className="text-sm hover:bg-slate-100 leading-8">
+                    <Link to="/internet">Internet</Link>
+                  </li>
+                  <li className="text-sm hover:bg-slate-100 leading-8">
+                    <Link to="/hosting">Hosting</Link>
+                  </li>
+                  <li className="text-sm hover:bg-slate-100 leading-8">
+                    <Link to="/partners">Partners</Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
 
-          <a
-            href="#"
-            class="bg-red-400 px-5 py-1 rounded-3xl hover:bg-red-500 text-white hidden md:flex"
-            role="button"
+          {/* Contact Button */}
+          <Link
+            to="/"
+            className="bg-purple-400 px-5 py-1 rounded-3xl hover:bg-purple-500 text-white hidden md:flex"
           >
-            View Offers
-          </a>
+            Register
+          </Link>
 
-          <button id="mobile-icon" class="md:hidden">
-            <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+          {/* Mobile Menu Icon */}
+          <button onClick={toggleMobileMenu} className="md:hidden">
+            <i className="fa-solid fa-bars"></i>
           </button>
         </div>
 
-        <div class="md:hidden flex justify-center mt-3 w-full">
-          <div id="mobile-menu" class="mobile-menu absolute top-23 w-full">
-            <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="https://google.com" class="block pl-7">
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div
+            id="mobile-menu"
+            className="mobile-menu absolute top-20 w-full bg-gray-100 shadow-lg leading-9 font-bold h-screen"
+          >
+            <ul className="space-y-4">
+              <li className="border-b-2 border-white hover:bg-purple-400 hover:text-white pl-4">
+                <Link to="/" className="block pl-7">
                   Home
-                </a>
+                </Link>
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="#" class="block pl-7">
-                  News
-                </a>
+              <li className="border-b-2 border-white hover:bg-purple-400 hover:text-white pl-4">
+                <Link to="/about" className="block pl-7">
+                  About
+                </Link>
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white">
-                <a href="#" class="block pl-11">
-                  Services <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i>
-                </a>
-
-                <ul class="bg-white text-gray-800 w-full">
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
-                      Webdesign
-                    </a>
+              <li className="border-b-2 border-white hover:bg-purple-400 hover:text-white pl-4">
+                <span className="block pl-7">
+                  Services{" "}
+                  <i className="fa-solid fa-chevron-down fa-2xs pt-4"></i>
+                </span>
+                <ul className="bg-white text-gray-800 w-full">
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <Link to="/consultation" className="block pl-16">
+                      Consultation
+                    </Link>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
-                      Digital marketing
-                    </a>
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <Link to="/internet" className="block pl-16">
+                      Internet
+                    </Link>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
-                      SEO
-                    </a>
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <Link to="/hosting" className="block pl-16">
+                      Hosting
+                    </Link>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
-                      Ad campaigns
-                    </a>
-                  </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
-                      UX Design
-                    </a>
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <Link to="/partners" className="block pl-16">
+                      Partners
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="#" class="block pl-7">
-                  About
-                </a>
-              </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="#" class="block pl-7">
+              <li className="border-b-2 border-white hover:bg-purple-400 hover:text-white pl-4">
+                <Link to="/contact" className="block pl-7">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
+        )}
       </nav>
     </header>
   );
