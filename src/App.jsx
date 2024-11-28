@@ -30,14 +30,10 @@ function App() {
   //Routes
   return (
     <Router>
-      {/* Navigation */}
       <Navbar />
-
-      {/* Popup Form */}
-
-      {/* {isPopupVisible && (
+      {isPopupVisible && (
         <ContactFormPopup onClose={() => setIsPopupVisible(false)} />
-      )} */}
+      )}
 
       <Routes>
         {/* Menu Routes */}        

@@ -1,0 +1,36 @@
+.hero-container {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-slide-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .slick-dots {
+    bottom: 10px; /* Adjust dot positioning */
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1000;
+  }
+  
