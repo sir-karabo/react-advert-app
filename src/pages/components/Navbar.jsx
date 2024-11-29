@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../css/components/navbar.css"; // Ensure this path is correct
+// import "../../css/components/navbar.css"; 
 
-const Navbar = () => {
+//Activate Modal during startup
+const Navbar = ({ onOpen }) => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  //Modal
 
   //Services
   const handleServicesHover = (isOpen) => {
@@ -176,12 +176,15 @@ const Navbar = () => {
             </li>
             <li>
               {/* Pop up Modal */}
-              <Link
-                to="/home"
-                className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-              >
-                Modal
-              </Link>
+              <div className="flex justify-between items-center">
+                <h1 className="text-white text-lg">My App</h1>
+                <button
+                  className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+                  onClick={onOpen}
+                >
+                  Open Login Modal
+                </button>
+              </div>
             </li>
           </ul>
         </div>

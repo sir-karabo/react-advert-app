@@ -1,3 +1,4 @@
+//Modules
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -18,23 +19,28 @@ import Internet from "./pages/base/Internet";
 import Partners from "./pages/base/Partners";
 // Components
 import Navbar from "./pages/components/Navbar";
+import Hero from "./pages/components/Hero";
 import Footer from "./pages/components/Footer";
 // Utilities
-import ContactFormPopup from "./pages/util/ContactFormPopup";
+import Modal from "./pages/util/Modal";
 
 function App() {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  
+  const handleOpenModal = () => {
+    setIsPopupVisible(true);
+  };
 
-  const togglePopup = () => {
-    setIsPopupVisible(!isPopupVisible);
+  const handleCloseModal = () => {
+    setIsPopupVisible(false);
   };
 
   return (
     <Router>
-      <Navbar onContactClick={togglePopup} />
-      {isPopupVisible && (
-        <ContactFormPopup onClose={() => setIsPopupVisible(false)} />
-      )}
+      <Navbar onOpen={handleOpenModal} onContactClick={togglePopup} />
+      {isPopupVisible && <Modal onClose={handleCloseModal} />}
+
+      <Hero />
 
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
