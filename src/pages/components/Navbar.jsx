@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Navbar = ({ onOpen }) => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
-
   //Services
   const handleServicesHover = (isOpen) => {
     setServicesOpen(isOpen);

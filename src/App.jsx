@@ -26,7 +26,7 @@ import Modal from "./pages/util/Modal";
 
 function App() {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
-  
+
   const handleOpenModal = () => {
     setIsPopupVisible(true);
   };
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar onOpen={handleOpenModal} onContactClick={togglePopup} />
+      <Navbar onOpen={handleOpenModal} />
       {isPopupVisible && <Modal onClose={handleCloseModal} />}
 
       <Hero />
