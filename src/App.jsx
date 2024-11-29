@@ -38,9 +38,8 @@ function App() {
   return (
     <Router>
       <Navbar onOpen={handleOpenModal} />
-      {isPopupVisible && <Modal onClose={handleCloseModal} />}
+      {/* <Hero /> */}
 
-      <Hero />
 
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
@@ -54,8 +53,8 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>
-
       <Footer />
+      {isPopupVisible && <Modal onClose={handleCloseModal} />}
     </Router>
   );
 }
