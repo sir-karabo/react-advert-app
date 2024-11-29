@@ -4,131 +4,189 @@ import "../../css/components/navbar.css"; // Ensure this path is correct
 
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
-  // const [isPopupVisible, setIsPopupVisible] = useState(false); // Add missing state
 
+  //Modal
+
+  //Services
   const handleServicesHover = (isOpen) => {
     setServicesOpen(isOpen);
   };
 
   return (
-    <header className="h-20 bg-white">
-      <nav className="relative px-4 py-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <Link to="/home">
-            <img
-              src="https://avrasys.hu/logoipsum-logo-54.svg" // Replace with your logo path
-              alt="Logo"
-              className="h-10"
-            />
-          </Link>
-          <ul className="hidden md:flex space-x-6">
+    <nav class="border-gray-200">
+      <div class="container mx-auto flex flex-wrap items-center justify-between">
+        <a href="#" class="flex">
+          <svg
+            class="h-10 mr-3"
+            width="51"
+            height="70"
+            viewBox="0 0 51 70"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0)">
+              <path
+                d="M1 53H27.9022C40.6587 53 51 42.7025 51 30H24.0978C11.3412 30 1 40.2975 1 53Z"
+                fill="#76A9FA"
+              ></path>
+              <path
+                d="M-0.876544 32.1644L-0.876544 66.411C11.9849 66.411 22.4111 55.9847 22.4111 43.1233L22.4111 8.87674C10.1196 8.98051 0.518714 19.5571 -0.876544 32.1644Z"
+                fill="#A4CAFE"
+              ></path>
+              <path
+                d="M50 5H23.0978C10.3413 5 0 15.2975 0 28H26.9022C39.6588 28 50 17.7025 50 5Z"
+                fill="#1C64F2"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="51" height="70" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="self-center text-lg font-semibold whitespace-nowrap">
+            RSA.onUncapped
+          </span>
+        </a>
+        <button
+          data-collapse-toggle="mobile-menu"
+          type="button"
+          class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
+          aria-controls="mobile-menu-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Main menu</span>
+          <svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <svg
+            class="hidden w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+          <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
             <li>
-              <Link to="/home">Home</Link>
+              <Link
+                to="/home"
+                className="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link
+                to="/about"
+                className="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none"
+              >
+                About
+              </Link>
             </li>
-
-            {/* Services Dropdown */}
             <li
               className="relative"
               onMouseEnter={() => handleServicesHover(true)}
               onMouseLeave={() => handleServicesHover(false)}
             >
-              <span className="mr-1"><Link to="/services">Services </Link> </span> 
-              <span className="inline-block ml-1">&#9660;</span>{" "}
-              {/* Dropdown Arrow */}
-              {/* Drop-down menu */}
-              {servicesOpen && (
-                <ul className="absolute bg-white p-3 w-52 top-6 left-0 transform scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
-                  <li className="text-sm hover:bg-slate-100 leading-8">
-                    <Link to="/consultation">Consultation</Link>
-                  </li>
-                  <li className="text-sm hover:bg-slate-100 leading-8">
-                    <Link to="/internet">Internet</Link>
-                  </li>
-                  <li className="text-sm hover:bg-slate-100 leading-8">
-                    <Link to="/hosting">Hosting</Link>
-                  </li>
-                  <li className="text-sm hover:bg-slate-100 leading-8">
-                    <Link to="/partners">Partners</Link>
-                  </li>
-                </ul>
-              )}
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto"
+              >
+                <Link to="/services">Services </Link>
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              {/* <!-- Dropdown menu --> */}
+              <div
+                id="dropdownNavbar"
+                class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44"
+              >
+                {servicesOpen && (
+                  <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <Link
+                        to="/internet"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                      >
+                        Internet
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/hosting"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                      >
+                        Hosting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/specialized"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                      >
+                        Specialized
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+                <div class="py-1">
+                  <Link
+                    to="/partners"
+                    className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                  >
+                    Partners
+                  </Link>
+                </div>
+              </div>
             </li>
-
             <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-
-          {/* Mobile Menu Button */}
-          <button id="mobile-icon" className="md:hidden">
-            <i className="fa-solid fa-bars"></i>
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      <div className="md:hidden flex justify-center mt-3 w-full">
-        <div id="mobile-menu" className="mobile-menu absolute top-23 w-full">
-          <ul className="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <Link to="/" className="block pl-7">
-                Home
-              </Link>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <Link to="/news" className="block pl-7">
-                News
-              </Link>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <Link to="/about" className="block pl-7">
-                About
-              </Link>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <Link to="/contact" className="block pl-7">
+              <Link
+                to="/contact"
+                className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+              >
                 Contact
               </Link>
             </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <span className="block pl-11">
-                Services <span className="inline-block ml-1">&#9660;</span>
-              </span>
-              <ul className="bg-white text-gray-800 w-full">
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <Link to="/webdesign" className="block pl-16">
-                    Webdesign
-                  </Link>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <Link to="/digital-marketing" className="block pl-16">
-                    Digital Marketing
-                  </Link>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <Link to="/seo" className="block pl-16">
-                    SEO
-                  </Link>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <Link to="/ad-campaigns" className="block pl-16">
-                    Ad Campaigns
-                  </Link>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <Link to="/ux-design" className="block pl-16">
-                    UX Design
-                  </Link>
-                </li>
-              </ul>
+            <li>
+              {/* Pop up Modal */}
+              <Link
+                to="/home"
+                className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+              >
+                Modal
+              </Link>
             </li>
           </ul>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 

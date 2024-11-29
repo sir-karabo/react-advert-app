@@ -2,207 +2,369 @@ import React from "react";
 
 const Internet = () => {
   return (
-    
-<section class="text-gray-700 body-font overflow-hidden border-t border-gray-200">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap">
-    <div class="lg:w-1/4 mt-48 hidden lg:block">
-      <div class="mt-px border-t border-gray-300 border-b border-l rounded-tl-lg rounded-bl-lg overflow-hidden">
-        <p class="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start -mt-px">Fingerstache disrupt</p>
-        <p class="text-gray-900 h-12 text-center px-4 flex items-center justify-start">Franzen hashtag</p>
-        <p class="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start">Tilde art party</p>
-        <p class="text-gray-900 h-12 text-center px-4 flex items-center justify-start">Banh mi cornhole</p>
-        <p class="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start">Waistcoat squid hexagon</p>
-        <p class="text-gray-900 h-12 text-center px-4 flex items-center justify-start">Pinterest occupy authentic</p>
-        <p class="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start">Brooklyn helvetica</p>
-        <p class="text-gray-900 h-12 text-center px-4 flex items-center justify-start">Long Feature Two</p>
-        <p class="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start">Feature One</p>
-      </div>
-    </div>
-    <div class="flex lg:w-3/4 w-full flex-wrap lg:border border-gray-300 rounded-lg">
-      <div class="lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none">
-        <div class="px-2 text-center h-48 flex flex-col items-center justify-center">
-          <h3 class="tracking-widest">START</h3>
-          <h2 class="text-5xl text-gray-900 font-medium leading-none mb-4 mt-2">Free</h2>
-          <span class="text-sm text-gray-600">Next 3 months</span>
+    <>
+      <section class="mb-28 text-center">
+        <h3 class="mb-10 text-3xl font-semibold text-gray-700 dark:text-white">
+          Hosting & Web Packages
+        </h3>
+
+        <div class="grid gap-8 lg:grid-cols-3">
+          <div class="block rounded-lg bg-white text-center shadow-lg dark:bg-neutral-700">
+            <div class="border-b-2 border-neutral-100 px-7 py-3 dark:border-neutral-600 dark:text-neutral-50">
+              <h5 class="mb-4 mt-4 text-lg font-semibold uppercase">Basic</h5>
+
+              <h4 class="mb-4">
+                <span class="text-3xl font-bold">$ 129</span>
+                <span class="text-gray-500 dark:text-gray-300">/year</span>
+              </h4>
+              <button
+                type="button"
+                class="mb-4 inline-block w-full rounded-full bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
+                data-twe-ripple-init
+                data-twe-ripple-color="primary"
+              >
+                Buy
+              </button>
+            </div>
+            <div class="p-7">
+              <ul class="text-gray-700 dark:text-white">
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Unlimited updates</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Git repository</span>
+                </li>
+
+                <li class="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>npm installations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="block rounded-lg bg-white text-center shadow-lg dark:bg-neutral-700">
+            <div class="border-b-2 border-neutral-100 px-7 py-3 dark:border-neutral-600 dark:text-neutral-50">
+              <h5 class="mb-4 mt-4 text-lg font-semibold uppercase">
+                Advanced
+              </h5>
+
+              <h4 class="mb-4">
+                <span class="text-3xl font-bold">$ 299</span>
+                <span class="text-gray-500 dark:text-gray-300">/year</span>
+              </h4>
+              <button
+                type="button"
+                class="mb-4 inline-block w-full rounded-full bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+              >
+                Buy
+              </button>
+            </div>
+
+            <div class="p-7">
+              <ul class="text-gray-700 dark:text-white">
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Unlimited updates</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Git repository</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>npm installations</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Code examples</span>
+                </li>
+
+                <li class="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Private snippets</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="block rounded-lg bg-white text-center shadow-lg dark:bg-neutral-700">
+            <div class="border-b-2 border-neutral-100 px-7 py-3 dark:border-neutral-600 dark:text-neutral-50">
+              <h5 class="mb-4 mt-4 text-lg font-semibold uppercase">
+                Enterprise
+              </h5>
+
+              <h4 class="mb-4">
+                <span class="text-3xl font-bold">$ 499</span>
+                <span class="text-gray-500 dark:text-gray-300">/year</span>
+              </h4>
+              <button
+                type="button"
+                class="mb-4 inline-block w-full rounded-full bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
+                data-twe-ripple-init
+                data-twe-ripple-color="primary"
+              >
+                Buy
+              </button>
+            </div>
+
+            <div class="p-7">
+              <ul class="text-gray-700 dark:text-white">
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Unlimited updates</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Git repository</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>npm installations</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Code examples</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+                  <span>Premium snippets</span>
+                </li>
+
+                <li class="mb-4 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Premium support</span>
+                </li>
+
+                <li class="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="me-2 h-6 w-6 text-green-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+
+                  <span>Drag and Drop builder</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <p class="bg-gray-100 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center border-t border-gray-300">Schlitz single-origin</p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="h-12 text-gray-600 px-6 text-center leading-relaxed flex items-center justify-center">Feature</p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <div class="border-t border-gray-300 p-6 text-center rounded-bl-lg">
-          <button class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Button
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-          <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
-        </div>
-      </div>
-      <div class="lg:w-1/3 lg:-mt-px w-full mb-10 lg:mb-0 border-2 rounded-lg border-indigo-500 relative">
-        <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
-        <div class="px-2 text-center h-48 flex flex-col items-center justify-center">
-          <h3 class="tracking-widest">PRO</h3>
-          <h2 class="text-5xl text-gray-900 font-medium flex items-center justify-center leading-none mb-4 mt-2">$38
-            <span class="text-gray-600 text-base ml-1">/mo</span>
-          </h2>
-          <span class="text-sm text-gray-600">Charging $456 per year</span>
-        </div>
-        <p class="bg-gray-100 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center border-t border-gray-300">Schlitz single-origin</p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="h-12 text-gray-600 text-center leading-relaxed flex items-center justify-center">Feature</p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <div class="p-6 text-center border-t border-gray-300">
-          <button class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Button
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-          <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
-        </div>
-      </div>
-      <div class="lg:w-1/3 w-full lg:mt-px border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none">
-        <div class="px-2 text-center h-48 flex flex-col items-center justify-center">
-          <h3 class="tracking-widest">BUSINESS</h3>
-          <h2 class="text-5xl text-gray-900 font-medium flex items-center justify-center leading-none mb-4 mt-2">$54
-            <span class="text-gray-600 text-base ml-1">/mo</span>
-          </h2>
-          <span class="text-sm text-gray-600">Charging $648 per year</span>
-        </div>
-        <p class="bg-gray-100 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center border-t border-gray-300">Schlitz single-origin</p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="h-12 text-gray-600 text-center leading-relaxed flex items-center justify-center">Feature</p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <span class="w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-              <path d="M20 6L9 17l-5-5"></path>
-            </svg>
-          </span>
-        </p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <p class="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </p>
-        <div class="p-6 text-center border-t border-gray-300">
-          <button class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Button
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-          <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+    </>
   );
 };
 
