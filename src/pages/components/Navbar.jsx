@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import "../../css/components/navbar.css"; 
+// import "../../css/components/navbar.css";
 
 //Activate Modal during startup
 const Navbar = ({ onOpen }) => {
@@ -128,7 +128,7 @@ const Navbar = ({ onOpen }) => {
                 class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44"
               >
                 {servicesOpen && (
-                  <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                  <ul class="px-1" aria-labelledby="dropdownLargeButton">
                     <li>
                       <Link
                         to="/internet"
@@ -155,14 +155,12 @@ const Navbar = ({ onOpen }) => {
                     </li>
                   </ul>
                 )}
-                <div class="py-1">
-                  <Link
-                    to="/partners"
-                    className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                  >
-                    Partners
-                  </Link>
-                </div>
+                <Link
+                  to="/partners"
+                  className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                >
+                  Partners
+                </Link>
               </div>
             </li>
             <li>

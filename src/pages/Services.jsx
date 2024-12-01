@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <>
       <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
-        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-black text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
           <a href="#!">
             <img
               class="rounded-t-lg"
@@ -23,7 +23,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-black text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
           <a href="#!">
             <img
               class="rounded-t-lg"
@@ -41,7 +41,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-black text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
           <a href="#!">
             <img
               class="rounded-t-lg"
@@ -58,7 +58,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-black text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
           <a href="#!">
             <img
               class="rounded-t-lg"

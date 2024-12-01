@@ -19,7 +19,7 @@ import Internet from "./pages/base/Internet";
 import Partners from "./pages/base/Partners";
 // Components
 import Navbar from "./pages/components/Navbar";
-import Hero from "./pages/components/Hero";
+// import Hero from "./pages/components/Hero";
 import Footer from "./pages/components/Footer";
 // Utilities
 import Modal from "./pages/util/Modal";
@@ -38,9 +38,8 @@ function App() {
   return (
     <Router>
       <Navbar onOpen={handleOpenModal} />
+      
       {/* <Hero /> */}
-
-
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
