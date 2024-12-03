@@ -1,137 +1,94 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
-// import "../../css/components/hero.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// IMPORTING IMAGES - Updated to import each image individually instead of destructuring from an array
+import slide1 from "../../media/assets/slide-01.jpg"; // Correct image import
+import slide2 from "../../media/assets/slide-02.jpg"; // Correct image import
+import slide3 from "../../media/assets/slide-03.jpg"; // Correct image import
+
 const Hero = () => {
+  // Settings for React Slick
+  const settings = {
+    dots: true, // Enable the indicators (dots for navigation)
+    infinite: true, // Infinite loop
+    speed: 500, // Speed of transition (500ms)
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Set autoplay speed (3 seconds)
+    arrows: true, // Show default previous/next arrows
+    prevArrow: (
+      <button className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-opacity-50 p-2 rounded-full shadow-lg hover:bg-opacity-70 transition">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+    ),
+    nextArrow: (
+      <button className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-opacity-50 p-2 rounded-full shadow-lg hover:bg-opacity-70 transition">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    ),
+  };
+
   return (
-    <>
-      <div
-        id="carouselExampleIndicators"
-        class="relative"
-        data-twe-carousel-init
-        data-twe-ride="carousel"
-      >
-        <div
-          class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-          data-twe-carousel-indicators
-        >
-          <button
-            type="button"
-            data-twe-target="#carouselExampleIndicators"
-            data-twe-slide-to="0"
-            data-twe-carousel-active
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-twe-target="#carouselExampleIndicators"
-            data-twe-slide-to="1"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-twe-target="#carouselExampleIndicators"
-            data-twe-slide-to="2"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 3"
-          ></button>
+    <div className="relative w-full">
+      {/* Carousel Container with React-Slick */}
+      <Slider {...settings}>
+        {/* SLIDE 1 */}
+        <div className="relative w-full h-[500px]">
+          <img
+            src={slide1} // UPDATED to use the imported variable `slide1` instead of hardcoding the path
+            alt="Slide 1"
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-          <div
-            class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-twe-carousel-item
-            data-twe-carousel-active
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-              class="block w-full"
-              alt="Wild Landscape"
-            />
-          </div>
-
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-twe-carousel-item
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-              class="block w-full"
-              alt="Camera"
-            />
-          </div>
-
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-twe-carousel-item
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-              class="block w-full"
-              alt="Exotic Fruits"
-            />
-          </div>
+        {/* SLIDE 2 */}
+        <div className="relative w-full h-[500px]">
+          <img
+            src={slide2} // UPDATED to use the imported variable `slide2` instead of hardcoding the path
+            alt="Slide 2"
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        <button
-          class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-          type="button"
-          data-twe-target="#carouselExampleIndicators"
-          data-twe-slide="prev"
-        >
-          <span class="inline-block h-8 w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </span>
-          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Previous
-          </span>
-        </button>
-        <button
-          class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-          type="button"
-          data-twe-target="#carouselExampleIndicators"
-          data-twe-slide="next"
-        >
-          <span class="inline-block h-8 w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </span>
-          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Next
-          </span>
-        </button>
-      </div>
-    </>
+        {/* SLIDE 3 */}
+        <div className="relative w-full h-[500px]">
+          <img
+            src={slide3} // UPDATED to use the imported variable `slide3` instead of hardcoding the path
+            alt="Slide 3"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </Slider>
+    </div>
   );
 };
 
